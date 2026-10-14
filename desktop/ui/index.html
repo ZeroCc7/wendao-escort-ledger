@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>押镖账本</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="theme.css">
+  <script src="icons.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="主导航">
+      <div class="brand"><img src="art/mini-program-logo.png" alt="天墉城·万事屋 Logo"><span>押镖账本</span></div>
+      <div class="sidebar-caption">工作台</div>
+      <nav id="navigation">
+        <button type="button" data-page="overview" class="nav-item active"><img src="art/icon-home.png" alt="">统计总览</button>
+        <button type="button" data-page="logs" class="nav-item"><img src="art/icon-journal.png" alt="">日志文件</button>
+        <button type="button" data-page="history" class="nav-item"><img src="art/icon-history.png" alt="">历史记录</button>
+      </nav>
+      <div class="sidebar-bottom"><div class="mini-program"><strong>天墉城·万事屋</strong><img src="art/mini-program-code.png" alt="天墉城·万事屋小程序码"><span>微信扫码打开小程序</span></div><button type="button" data-page="settings" class="nav-item"><img src="art/icon-settings.png" alt="">设置</button><div class="local-tag"><span></span>仅保存在本机</div></div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar"><div class="top-title"><h1 id="page-title">统计总览</h1><p id="page-subtitle">本地押镖记录</p></div><div class="top-actions"><button type="button" class="directory-button" id="choose-button" title="更改日志目录"><img src="art/icon-folder.png" alt=""><span class="directory-copy"><span>日志目录</span><strong id="chat-path">D:\asktao\chat</strong><small id="source-status" class="source-status">等待扫描</small></span><img class="directory-chevron" src="icons/chevron-down.svg" alt=""></button><button type="button" class="icon-button" id="refresh-button" aria-label="刷新页面" title="刷新页面"><img src="icons/refresh-cw.svg" alt=""></button><button type="button" class="primary-button" id="scan-button"><img src="art/icon-scan.png" alt=""><span>扫描日志<small>解析最新数据</small></span></button></div></header>
+      <main id="content" aria-live="polite"></main>
+      <footer><span id="status-line">本地账本已就绪</span><span>游戏币与代金券分别统计</span></footer>
+    </div>
+  </div>
+  <dialog id="role-dialog"><form method="dialog"><div class="dialog-header"><h2>更改角色编号</h2><button type="button" class="icon-button" id="close-dialog" aria-label="关闭"><img src="icons/x.svg" alt=""></button></div><p id="role-file"></p><label for="role-number">角色编号</label><input id="role-number" type="number" min="1" max="99" step="1"><p class="dialog-note">已占用的编号会与当前角色交换。</p><div class="dialog-actions"><button value="cancel" type="submit">取消</button><button type="button" class="primary-button" id="save-role">保存</button></div></form></dialog>
+</body>
+</html>

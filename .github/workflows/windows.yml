@@ -1,0 +1,29 @@
+name: Windows
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: python -m pip install -r requirements-build.txt
+      - name: Test
+        run: python tests/test_escort_desktop.py
+      - name: Build
+        shell: pwsh
+        run: ./scripts/build-escort-desktop.ps1
+      - name: Package
+        shell: pwsh
+        run: Compress-Archive -Path dist/押镖账本.exe, LICENSE, THIRD_PARTY_NOTICES.md, third_party -DestinationPath dist/押镖账本-windows.zip
+      - name: Save executable
+        uses: actions/upload-artifact@v4
+        with:
+          name: wendao-escort-ledger-windows
+          path: dist/押镖账本-windows.zip
