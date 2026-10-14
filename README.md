@@ -13,7 +13,7 @@
 
 ## 下载与使用
 
-Windows 用户可从 GitHub Releases 下载 `押镖账本-windows.zip`，解压后运行其中的 `押镖账本.exe`。需要系统安装 Microsoft Edge WebView2 Runtime。首次启动后在“设置”中选择游戏目录（包含 `chat` 文件夹），然后点击“扫描日志”。
+Windows 用户可从 GitHub Releases 下载 `wendao-escort-ledger-windows.zip`，解压后运行其中的 `押镖账本.exe`。需要系统安装 Microsoft Edge WebView2 Runtime。首次启动后在“设置”中选择游戏目录（包含 `chat` 文件夹），然后点击“扫描日志”。
 
 数据保存在 `%LOCALAPPDATA%\WendaoEscort\escort.sqlite3`。卸载或替换程序不会清除这份账本；迁移电脑时可在程序关闭后复制该文件。不要将自己的 `chat` 日志或账本数据库提交到公开仓库。
 

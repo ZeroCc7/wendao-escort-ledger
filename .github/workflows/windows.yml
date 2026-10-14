@@ -21,9 +21,9 @@ jobs:
         run: ./scripts/build-escort-desktop.ps1
       - name: Package
         shell: pwsh
-        run: Compress-Archive -Path dist/押镖账本.exe, LICENSE, THIRD_PARTY_NOTICES.md, third_party -DestinationPath dist/押镖账本-windows.zip
+        run: Compress-Archive -Path dist/押镖账本.exe, LICENSE, THIRD_PARTY_NOTICES.md, third_party -DestinationPath dist/wendao-escort-ledger-windows.zip
       - name: Save executable
         uses: actions/upload-artifact@v4
         with:
           name: wendao-escort-ledger-windows
-          path: dist/押镖账本-windows.zip
+          path: dist/wendao-escort-ledger-windows.zip
