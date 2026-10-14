@@ -11,6 +11,14 @@
 
 程序不需要本项目以外的服务，也不会上传游戏日志。小程序 Logo 与二维码仅用于界面展示；本工具与游戏官方无隶属关系。
 
+## 界面预览
+
+截图使用虚构数据，不包含玩家日志。图片宽度限制为 720 像素，点击可查看原图。
+
+<a href="docs/overview.jpg"><img src="docs/overview.jpg" alt="押镖账本统计总览和镖级柱状图" width="720"></a>
+
+<a href="docs/history-trend.jpg"><img src="docs/history-trend.jpg" alt="游戏币和代金券双趋势图" width="720"></a>
+
 ## 下载与使用
 
 Windows 用户可从 GitHub Releases 下载 `wendao-escort-ledger-windows.zip`，解压后运行其中的 `押镖账本.exe`。需要系统安装 Microsoft Edge WebView2 Runtime。首次启动后在“设置”中选择游戏目录（包含 `chat` 文件夹），然后点击“扫描日志”。
